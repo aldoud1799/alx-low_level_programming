@@ -1,4 +1,4 @@
-i#include "holberton.h"
+#include "holberton.h"
 
 /**
  * puts2 - print  every other character of a string
@@ -7,17 +7,14 @@ i#include "holberton.h"
  */
 void puts2(char *str)
 {
-	int i, x;
-	i = 0;
-	x = 0;
-	while (str[i++])
+	int i = 0;
+
+	for (; str[i] != '\0'; i++)
 	{
-		x++;
-	}
-	for (i = 0; i < x; i += 2)
-	{
-		_putchar(*(str + i));
+		if ((i % 2) == 0)
+			_putchar(str[i]);
+		else
+			continue;
 	}
 	_putchar('\n');
 }
-
