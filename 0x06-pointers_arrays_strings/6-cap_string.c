@@ -1,33 +1,33 @@
 #include "holberton.h"
-
 /**
- * cap_string - a function that capitalizes all words of a string
- * @n: input string
- * Return: caps on first letter of a separator
+ * cap_string - capitalizes all words of a string
+ *
+ * @z: the string to look at
+ *
+ * Return: the capitalized string
  */
-char *cap_string(char *n)
+
+char *cap_string(char *z)
 {
-	int i, x;
-	int cap = 32;
-	int separators[] = {',', ';', '.', '?', '"', '(', ')', '{', '}', ' ', '\n', '\t'};
-	
-	for (i = 0; n[i] != '\0'; i++)
+	int i = 0;
+	int j;
+	char badBoys[] = " \n\t,;.!?\"(){}";
+
+
+	if (z[0] >= 'a' && z[0] <= 'z')
+		z[0] -= 32;
+
+	for (; z[i] != '\0'; i++)
 	{
-		if (n[i] >= 'a' && n[i] <= 'z')
+		for (j = 0; j < 14; j++)
 		{
-			n[i] = n[i] - cap;
-		}
-
-		cap = 0;
-
-		for (x = 0; x <= 12; x++)
-		{
-			if (n[i] == separators[x])
+			if (z[i] == badBoys[j])
 			{
-				x = 12;
-				cap = 32;
+				if (z[i + 1] >= 'a' && z[i + 1] <= 'z')
+					z[i + 1] -= 32;
 			}
 		}
 	}
-	return (n);
+
+	return (z);
 }
