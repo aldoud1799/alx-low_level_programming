@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (0);
 	}
+
 	else if (argc == 3)
 	{
 		for (i = 0 ; i < argc ; i++)
@@ -35,6 +36,7 @@ int main(int argc, char *argv[])
 	mult = j * k;
 	printf("%d\n", mult);
 	}
+
 	return (0);
 }
 	
