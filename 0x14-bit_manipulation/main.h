@@ -1,8 +1,13 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
-
-#include <stdio.h>
+<<<<<<< Updated upstream
+#ifndef BIT_MANIPULATION
+#define BIT_MANIPULATION
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+=======
+#ifndef MAIN_H
+#define MAIN_H
+>>>>>>> Stashed changes
 
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
@@ -11,5 +16,9 @@ int get_bit(unsigned long int n, unsigned int index);
 int set_bit(unsigned long int *n, unsigned int index);
 int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
+int get_endianness(void);
+<<<<<<< Updated upstream
+=======
 
+>>>>>>> Stashed changes
 #endif
